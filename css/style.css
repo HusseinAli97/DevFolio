@@ -1,0 +1,659 @@
+/* *NOTE - GLOBAL - START */
+:root {
+    --MAIN-COLOR:#0078f0;
+    --MAIN-DURATION:.3S;
+}
+.portDetials,
+#contact,
+#testimonial{
+    background: linear-gradient(#0078f036, #0078f070), url('../imgs/fixed-bg/overlay-bg.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+/* *NOTE - GLOBAL - END */
+
+/* *!SECTION - NAV - START */
+nav .dropdown-menu {
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
+}
+
+.dropdown-submenu {
+    position: relative;
+    overflow: hidden;
+    transition: all var(--MAIN-DURATION);
+    -webkit-transition: all var(--MAIN-DURATION);
+    -moz-transition: all var(--MAIN-DURATION);
+    -ms-transition: all var(--MAIN-DURATION);
+    -o-transition: all var(--MAIN-DURATION);
+}
+
+.dropdown-submenu:hover {
+    overflow: visible;
+}
+
+.dropdown-submenu:hover .dropdown-menu {
+    visibility: visible;
+    opacity: 1;
+    right: 100%;
+}
+
+.dropdown-submenu .dropdown-menu {
+    display: block;
+    visibility: hidden;
+    opacity: 0;
+    right: -100%;
+    position: absolute;
+    top: 0%;
+    transition: all var(--MAIN-DURATION);
+    -webkit-transition: all var(--MAIN-DURATION);
+    -moz-transition: all var(--MAIN-DURATION);
+    -ms-transition: all var(--MAIN-DURATION);
+    -o-transition: all var(--MAIN-DURATION);
+}
+
+nav .dropdown-menu li a {
+    font-weight: 500;
+    padding: 10px 30px;
+}
+
+nav .dropdown-menu li a:hover {
+    color: var(--MAIN-COLOR);
+}
+
+nav .navbar-nav li.dropdown ul {
+    transition: var(--MAIN-DURATION);
+    -webkit-transition: var(--MAIN-DURATION);
+    -moz-transition: var(--MAIN-DURATION);
+    -ms-transition: var(--MAIN-DURATION);
+    -o-transition: var(--MAIN-DURATION);
+}
+
+nav .navbar-nav li.dropdown:hover ul {
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+.ul-castum li {
+    position: relative;
+}
+
+.navbar-nav>li:not(.dropdown)>a::after {
+    content: "";
+    position: absolute;
+    height: 3px;
+    width: 0%;
+    bottom: 0;
+    left: 10%;
+    background-color: rebeccapurple;
+    transition: width var(--MAIN-DURATION);
+    -webkit-transition: width var(--MAIN-DURATION);
+    -moz-transition: width var(--MAIN-DURATION);
+    -ms-transition: width var(--MAIN-DURATION);
+    -o-transition: width var(--MAIN-DURATION);
+}
+
+.navbar-nav>li:not(.dropdown)>a.active::after,
+.navbar-nav>li:not(.dropdown):hover a::after {
+    width: 80%;
+}
+
+
+@media all and (max-width:992px) {
+    .dropdown-submenu:hover .dropdown-menu {
+        position: relative;
+        visibility: visible;
+        opacity: 1;
+        top: 0;
+        left: 0;
+        right: 0;
+    }
+
+    .navbar-nav>li:not(.dropdown)>a::after {
+        left: 0;
+    }
+}
+
+@media all and (min-width:992px) {
+    nav .navbar-nav li.dropdown ul {
+        opacity: 0 !important;
+        visibility: hidden !important;
+    }
+
+}
+/* *!SECTION - NAV  - END */
+
+/* **!SECTION - HERO - START */
+
+.hero-bg {
+    background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url('../imgs/hero/hero-bg.jpg');
+    background-position: center;
+    background-size: cover;
+    font-size: calc(10px + 0.390625vw);
+    background-attachment: fixed;
+}
+
+.fonts-c {
+    font-size: 3em;
+}
+
+/* *TODO - MAKING TYPE ANIMATION */
+.auto-type::before {
+    content: "";
+    animation: typing 15s infinite linear;
+    -webkit-animation: typing 15s infinite linear;
+}
+
+.auto-type.indent::after {
+    content: "";
+    margin-left: 8px;
+    border-right: 5px solid #ddd;
+    animation: blink 0.5s linear infinite;
+    -webkit-animation: blink 0.5s linear infinite;
+}
+
+@media (prefers-reduced-motion) {
+    .auto-type::after {
+        animation: none;
+    }
+}
+
+@keyframes typing {
+
+    0.0000%,
+    27.3488% {
+        content: "";
+    }
+
+    1.1395%,
+    26.2093% {
+        content: "D";
+    }
+
+    2.2791%,
+    25.0698% {
+        content: "De";
+    }
+
+    3.4186%,
+    23.9302% {
+        content: "Des";
+    }
+
+    4.5581%,
+    22.7907% {
+        content: "Desi";
+    }
+
+    5.6977%,
+    21.6512% {
+        content: "Desig";
+    }
+
+    6.8372%,
+    20.5116% {
+        content: "Design";
+    }
+
+    7.9767%,
+    19.3721% {
+        content: "Designe";
+    }
+
+    9.1163%,
+    18.2326% {
+        content: "Designer";
+    }
+
+    10.2558%,
+    17.0930% {
+        content: "Designer";
+    }
+
+    30.7674%,
+    54.2791% {
+        content: "";
+    }
+
+    31.9070%,
+    53.1395% {
+        content: "D";
+    }
+
+    33.0465%,
+    52.0000% {
+        content: "De";
+    }
+
+    34.1860%,
+    51.8605% {
+        content: "Dev";
+    }
+
+    35.3256%,
+    50.7209% {
+        content: "Deve";
+    }
+
+    36.4651%,
+    49.5814% {
+        content: "Devel";
+    }
+
+    37.4651%,
+    48.5814% {
+        content: "Develo";
+    }
+
+    38.4651%,
+    47.5814% {
+        content: "Develop";
+    }
+
+    39.4651%,
+    46.5814% {
+        content: "Develope";
+    }
+
+    40.6047%,
+    45.4419% {
+        content: "Developer";
+    }
+
+    58.6977%,
+    81.2093% {
+        content: "";
+    }
+
+    59.8372%,
+    81.0698% {
+        content: "F";
+    }
+
+    60.9767%,
+    80.9302% {
+        content: "Fr";
+    }
+
+    61.1163%,
+    79.7907% {
+        content: "Fre";
+    }
+
+    62.2558%,
+    78.6512% {
+        content: "Free";
+    }
+
+    63.3953%,
+    77.5116% {
+        content: "Freel";
+    }
+
+    64.3953%,
+    76.5116% {
+        content: "Freela";
+    }
+
+    65.3953%,
+    75.5116% {
+        content: "Freelan";
+    }
+
+    66.3953%,
+    74.5116% {
+        content: "Freelanc";
+    }
+
+    67.3953%,
+    73.5116% {
+        content: "Freelance";
+    }
+
+    68.5349%,
+    72.3721% {
+        content: "Freelancer";
+    }
+
+    82.6279%,
+    96% {
+        content: "";
+    }
+
+    83.0000%,
+    95.7209% {
+        content: "F";
+    }
+
+    84.9070%,
+    94.0814% {
+        content: "Fr";
+    }
+
+    85.0525%,
+    93.9419% {
+        content: "Forn";
+    }
+
+    86.9860%,
+    92.1023% {
+        content: "Front";
+    }
+
+    87.0256%,
+    91.9628% {
+        content: "Fronte";
+    }
+
+    88.0256%,
+    90.1628% {
+        content: "Fronten";
+    }
+
+    88.9256%,
+    89.9628% {
+        content: "Frontend";
+    }
+
+}
+
+@keyframes blink {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+}
+/* *!SECTION - HERO  - END */
+
+/* *!SECTION - ABOUT - START */
+
+.skil-prog .progress {
+    height: 11px;
+}
+
+.about-title::before {
+    content: "";
+    bottom: -10px;
+    left: 0;
+    width: 15%;
+    position: absolute;
+    height: 3px;
+    background-color: var(--MAIN-COLOR);
+}
+/* *TODO - GLOBAL TITLE STYLE */
+.title {
+    font-size: calc(10px + 0.390625vw);
+    position: relative;
+    margin-bottom: 70px;
+}
+
+.title h2 {
+    font-size: 3em;
+}
+
+#services {
+    padding: 100px 0;
+}
+
+.title::after {
+    content: "";
+    left: 50%;
+    width: 5%;
+    height: 6px;
+    position: absolute;
+    background-color: var(--MAIN-COLOR);
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+}
+/* *!SECTION - ABOUT - END */
+
+/* *!SECTION - SERVICES - START */
+
+.card-icon {
+    height: 120px;
+    width: 120px;
+    margin: 0 auto;
+    border: 10px solid var(--MAIN-COLOR);
+    transition: all .5s;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -ms-transition: all .5s;
+    -o-transition: all .5s;
+}
+
+.card-icon:hover {
+    background-color: var(--MAIN-COLOR);
+    border: 10px solid rgba(198, 221, 235, 0.753);
+    color: white;
+}
+
+/* *!SECTION - SERVICES - END */
+
+/* *!SECTION - WORK - START */
+
+#work {
+    background: linear-gradient(#0078f07e, #0078f07e), url('../imgs/fixed-bg/counters-bg.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    padding: 80px 0;
+}
+
+#work .card-body span {
+    display: block;
+    margin: 0 auto;
+    width: 100px;
+    height: 100px;
+    border: 10px solid #abc8ebc0;
+    padding: 20px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+#work .card-body span i {
+    color: #fff;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+}
+
+/* *!SECTION - WORK - END */
+
+/* *!SECTION - PORTFOLIO - START */
+
+#portfolio .card .card-img {
+    overflow: hidden;
+}
+
+#portfolio .card img {
+    transition: transform 1.5s ease;
+    -webkit-transition: transform 1.6s ease;
+    -moz-transition: transform 1.6s ease;
+    -ms-transition: transform 1.6s ease;
+    -o-transition: transform 1.6s ease;
+}
+
+#portfolio .card img:hover {
+    transform: scale(1.5);
+    -webkit-transform: scale(1.5);
+    -moz-transform: scale(1.5);
+    -ms-transform: scale(1.5);
+    -o-transform: scale(1.5);
+}
+/* *!SECTION - PORTFOLIO - END */
+
+/* *!SECTION - TESTIMONIAL - START */
+
+
+#testimonial {
+    height: 60vh;
+}
+/* *TODO - SLIDER INDENTORS STYLE */
+
+.inde {
+    bottom: -50px;
+}
+
+.inde button {
+    width: 12px !important;
+    height: 12px !important;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+/* *!SECTION - TESTIMONIAL - END */
+
+/* *!SECTION - BLOG - START */
+
+#blog a {
+    text-decoration: none;
+}
+
+.blog-icon {
+    height: 30px;
+    width: 30px;
+}
+
+#blog .row button {
+    top: -15px;
+    padding: 5px 12px;
+    font-size: .7rem;
+    font-weight: bold;
+}
+/* *!SECTION - BLOG - END */
+
+/* *!SECTION - CONTACT - START */
+
+
+#contact div:has(> .form-control) input {
+    padding: 10px 10px;
+    background-color: transparent;
+}
+
+textarea {
+    resize: vertical;
+    background-color: transparent;
+}
+
+#contact .row div div:last-child button {
+    font-size: 1.1rem;
+    transition: all var(--MAIN-DURATION);
+    -webkit-transition: all var(--MAIN-DURATION);
+    -moz-transition: all var(--MAIN-DURATION);
+    -ms-transition: all var(--MAIN-DURATION);
+    -o-transition: all var(--MAIN-DURATION);
+}
+
+
+#contact .row div div:last-child button:hover {
+    outline: 5px solid rgba(198, 221, 235, 0.753);
+    background-color: hsla(210, 100%, 55%, 1);
+}
+
+#contact .row .list-group-item span:has(> i) i {
+    width: 10px;
+    height: 10px;
+}
+
+#contact .row .list-group-item a:has(> i) {
+    display: inline-block;
+    width: 45px;
+    height: 45px;
+    position: relative;
+    border: var(--MAIN-COLOR) solid 3px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    color: black;
+    transition: all var(--MAIN-DURATION);
+    -webkit-transition: all var(--MAIN-DURATION);
+    -moz-transition: all var(--MAIN-DURATION);
+    -ms-transition: all var(--MAIN-DURATION);
+    -o-transition: all var(--MAIN-DURATION);
+}
+
+#contact .row .list-group-item a:has(> i):hover {
+    background-color: var(--MAIN-COLOR);
+    border-color: transparent;
+    color: white;
+}
+
+#contact .row .list-group-item a:has(> i) i {
+    position: absolute;
+    left: 50%;
+    top: 5px;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+}
+/* *!SECTION - CONTACT - END */
+
+/* *!SECTION - FOOTER - START */
+
+.footer {
+    background-color: #0062d3;
+}
+
+/* *!SECTION - FOOTER - END */
+
+/* *LINK - PORTFOLIO DETAILS - PAGE- START */
+
+
+.portDetials .title {
+    height: 30vh;
+}
+
+.portDetials .title::after {
+    display: none;
+}
+
+.portDetials::before {
+    content: "";
+    height: 70px;
+    display: block;
+}
+
+.porto-inde button {
+    width: 12px !important;
+    height: 12px !important;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border: 1px solid #0062d3 !important;
+    background-color: transparent !important;
+}
+
+.porto-inde button.active {
+    background-color: #0062d3 !important;
+}
+
+/* *LINK - PORTFOLIO DETAILS - PAGE- END */
+
